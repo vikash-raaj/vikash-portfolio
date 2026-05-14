@@ -1,5 +1,6 @@
 import { profile } from '../data';
 import styles from './Hero.module.css';
+import profilePhoto from '../assets/profile.jpg';
 
 export default function Hero() {
   return (
@@ -36,7 +37,9 @@ export default function Hero() {
             ))}
           </div>
         </div>
-        <div className={styles.avatar}>👤</div>
+        <div className={styles.avatar}>
+          <img src={profilePhoto} alt={profile.name} className={styles.avatarImg} />
+        </div>
       </div>
     </section>
   );
