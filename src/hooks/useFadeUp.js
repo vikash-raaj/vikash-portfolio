@@ -7,7 +7,7 @@ export function useFadeUp() {
     if (!el) return;
     const observer = new IntersectionObserver(
       ([entry]) => { if (entry.isIntersecting) el.classList.add('visible'); },
-      { threshold: 0.1 }
+      { threshold: 0, rootMargin: '0px 0px 0px 0px' }
     );
     observer.observe(el);
     return () => observer.disconnect();
