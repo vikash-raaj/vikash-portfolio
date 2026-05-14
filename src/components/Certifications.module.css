@@ -1,0 +1,27 @@
+.section { padding: 80px 2rem; background: var(--bg); }
+.inner { max-width: 1200px; margin: 0 auto; }
+.label { font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; color: var(--primary); text-transform: uppercase; margin-bottom: 0.4rem; }
+.title { font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 800; letter-spacing: -0.5px; margin-bottom: 0.5rem; color: var(--text); }
+.subtitle { color: var(--muted); max-width: 580px; margin-bottom: 2.5rem; }
+.grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+  opacity: 0; transform: translateY(24px); transition: opacity 0.5s, transform 0.5s;
+}
+.grid.visible { opacity: 1; transform: none; }
+.card {
+  background: var(--card); border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--border);
+  display: flex; align-items: center; gap: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(0,112,210,0.1); }
+.icon {
+  width: 44px; height: 44px; border-radius: 10px;
+  background: var(--gradient);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; font-size: 1.2rem;
+}
+.name { font-size: 0.85rem; font-weight: 600; line-height: 1.4; }
+.org { font-size: 0.75rem; color: var(--muted); margin-top: 0.2rem; }

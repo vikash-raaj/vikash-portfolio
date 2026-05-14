@@ -1,0 +1,36 @@
+.section { padding: 80px 2rem; background: var(--card); }
+.inner { max-width: 1200px; margin: 0 auto; opacity: 0; transform: translateY(24px); transition: opacity 0.5s, transform 0.5s; }
+.inner.visible { opacity: 1; transform: none; }
+.label { font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; color: var(--primary); text-transform: uppercase; margin-bottom: 0.4rem; }
+.title { font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 800; letter-spacing: -0.5px; margin-bottom: 2.5rem; color: var(--text); }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+.text p { color: var(--muted); margin-bottom: 1rem; line-height: 1.8; }
+.highlights { display: grid; gap: 0.75rem; margin-top: 1.5rem; }
+.highlightItem {
+  display: flex; align-items: center; gap: 0.75rem;
+  padding: 0.75rem 1rem; background: var(--bg);
+  border-radius: 8px; font-size: 0.9rem; font-weight: 500;
+}
+.highlightIcon {
+  width: 36px; height: 36px; border-radius: 8px;
+  background: var(--gradient);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; font-size: 1rem;
+}
+.card {
+  background: var(--bg); border-radius: 16px;
+  padding: 2rem; border: 1px solid var(--border);
+}
+.row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 0.75rem 0; border-bottom: 1px solid var(--border); font-size: 0.9rem;
+}
+.row:last-child { border-bottom: none; }
+.rowLabel { color: var(--muted); font-weight: 500; }
+.rowValue { font-weight: 600; }
+.rowLink { color: var(--primary); font-weight: 600; }
+.rowLink:hover { text-decoration: underline; }
+
+@media (max-width: 768px) {
+  .grid { grid-template-columns: 1fr; gap: 2rem; }
+}

@@ -1,0 +1,16 @@
+.section { padding: 80px 2rem; background: var(--card); }
+.inner { max-width: 1200px; margin: 0 auto; }
+.label { font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; color: var(--primary); text-transform: uppercase; margin-bottom: 0.4rem; }
+.title { font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 800; letter-spacing: -0.5px; margin-bottom: 2rem; color: var(--text); }
+.grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  opacity: 0; transform: translateY(24px); transition: opacity 0.5s, transform 0.5s;
+}
+.grid.visible { opacity: 1; transform: none; }
+.card { background: var(--bg); border-radius: 16px; padding: 1.5rem; border: 1px solid var(--border); }
+.year { font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--primary); margin-bottom: 0.5rem; }
+.degree { font-weight: 700; margin-bottom: 0.3rem; }
+.field { font-size: 0.9rem; color: var(--muted); margin-bottom: 0.3rem; }
+.school { font-size: 0.85rem; color: var(--muted); margin-bottom: 0.75rem; line-height: 1.5; }
+.score { display: inline-block; background: rgba(0,112,210,0.08); color: var(--primary); font-size: 0.8rem; font-weight: 700; padding: 0.2rem 0.8rem; border-radius: 20px; }
