@@ -7,7 +7,6 @@ export default function Hero() {
     <section id="hero" className={styles.hero}>
       <div className={styles.inner}>
         <div className={styles.content}>
-          <span className={styles.badge}>★ Open to Senior Roles</span>
           <h1 className={styles.name}>{profile.name}</h1>
           <p className={styles.title}>{profile.title}</p>
           <div className={styles.meta}>
