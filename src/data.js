@@ -6,8 +6,9 @@ export const profile = {
   email: "vikashr370@gmail.com",
   phone: "+91 9057257152",
   phone2: "+91 9529284466",
-  linkedin: "https://www.linkedin.com/in/vikashraj-a12489119/",
+  linkedin: "https://www.linkedin.com/in/vikash-raj-a12489119/",
   trailblazer: "https://trailblazer.me/id/vikash-raj",
+  gitHub: "https://github.com/vikash-raaj",
   languages: ["English", "Hindi"],
   about: [
     "An energetic, self-motivated individual with the ability to grasp new technical concepts and utilize them in a productive manner. Accomplished and ambitious Software Engineer with around 6+ years of working experience in Telecom, Media Cloud, Insurance, and Salesforce Industry Cloud domains.",
@@ -15,7 +16,8 @@ export const profile = {
     "Bachelor of Technology in Computer Science & Engineering. Expertise in Salesforce development with extensive experience in Salesforce Vlocity, Salesforce Industry CPQ, Vlocity Order Management, CLM, EPC, Vlocity CPQ, Apex Classes, Apex Triggers, SOQL, SOSL, Customer360, Lightning Web Components, Lightning Aura Components, Salesforce Admin, Salesforce Sales Cloud, AWS, and Copado. Experienced in designing, developing & deploying applications using the Agile SDLC and Copado process. Trailhead Ranger. Cooperative team leader and team player with a positive attitude.",
   ],
   stats: [
-    { num: "6+", label: "Years Experience" },
+    { num: "10+", label: "Project Delivered" },
+    { num: "7+", label: "Years Experience" },
     { num: "9", label: "Certifications" },
     { num: "500+", label: "OM Tasks Delivered" },
     { num: "2000+", label: "Products Configured" },
@@ -214,20 +216,18 @@ export const education = [
     degree: "Bachelor of Technology (B.Tech)",
     field: "Computer Science & Engineering",
     institution: "Jaipur Engineering College & Research Centre, Rajasthan Technical University, Jaipur",
-    score: "68% Aggregate",
   },
   {
     year: "2015",
     degree: "Intermediate (Class XII)",
     field: "",
     institution: "DR. C.P. Thakur College, Patna, Bihar",
-    score: "71.8%",
+  
   },
   {
     year: "2013",
     degree: "High School (Class X)",
     field: "",
     institution: "Collegiate High School, Patna, Bihar",
-    score: "76.4%",
   },
 ];

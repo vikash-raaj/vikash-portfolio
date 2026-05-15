@@ -1,10 +1,10 @@
-.section { padding: 80px 2rem; background: var(--card); }
+.section { padding: 80px 2rem; background: #f0f4ff; }
 .inner { max-width: 1200px; margin: 0 auto; opacity: 0; transform: translateY(24px); transition: opacity 0.5s, transform 0.5s; }
-.inner.visible { opacity: 1; transform: none; }
+.inner:global(.visible) { opacity: 1; transform: none; }
 .label { font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; color: var(--primary); text-transform: uppercase; margin-bottom: 0.4rem; }
 .title { font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 800; letter-spacing: -0.5px; margin-bottom: 2.5rem; color: var(--text); }
 .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
-.text p { color: var(--muted); margin-bottom: 1rem; line-height: 1.8; }
+.text p { color: #1a1a2e; margin-bottom: 1rem; line-height: 1.8; font-size: 1rem; }
 .highlights { display: grid; gap: 0.75rem; margin-top: 1.5rem; }
 .highlightItem {
   display: flex; align-items: center; gap: 0.75rem;
