@@ -36,6 +36,7 @@ export default function About() {
               { label: 'Company', value: profile.company },
               { label: 'LinkedIn', value: 'vikashraj-a12489119', href: profile.linkedin },
               { label: 'Trailblazer', value: 'vikash-raj', href: profile.trailblazer },
+              { label: 'GitHub', value: 'vikash-raaj', href: profile.gitHub },
               { label: 'Languages', value: profile.languages.join(', ') },
             ].map(row => (
               <div className={styles.row} key={row.label}>

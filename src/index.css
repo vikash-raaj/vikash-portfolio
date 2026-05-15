@@ -9,6 +9,14 @@
   --gradient: linear-gradient(135deg, #0070d2 0%, #00a1e0 100%);
 }
 
+[data-theme="dark"] {
+  --bg: #0f1117;
+  --card: #1a1d27;
+  --text: #e8eaf0;
+  --muted: #8892a4;
+  --border: #2a2d3e;
+}
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 

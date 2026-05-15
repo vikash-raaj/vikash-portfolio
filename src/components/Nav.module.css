@@ -1,24 +1,33 @@
 .nav {
   position: fixed; top: 0; width: 100%; z-index: 1000;
-  background: rgba(255,255,255,0.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border);
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid transparent;
   padding: 0 2rem;
+  transition: background 0.3s, border-color 0.3s, box-shadow 0.3s;
 }
+.nav.scrolled {
+  border-bottom-color: var(--border);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+}
+[data-theme="dark"] .nav { background: rgba(15,17,23,0.85); }
 .inner {
   max-width: 1200px; margin: 0 auto;
   display: flex; align-items: center; justify-content: space-between;
   height: 64px;
 }
 .logo { font-weight: 800; font-size: 1.2rem; color: var(--primary); letter-spacing: -0.5px; }
-.links {
-  display: flex; gap: 2rem; list-style: none;
-}
-.links a {
-  color: var(--muted); font-size: 0.9rem; font-weight: 500;
-  transition: color 0.2s;
-}
+.links { display: flex; gap: 2rem; list-style: none; }
+.links a { color: var(--muted); font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
 .links a:hover, .activeLink { color: var(--primary) !important; }
+.actions { display: flex; align-items: center; gap: 0.5rem; }
+.themeBtn {
+  width: 36px; height: 36px; border-radius: 8px;
+  background: var(--bg); border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; color: var(--text); transition: background 0.2s;
+}
+.themeBtn:hover { background: var(--card); }
 .hamburger {
   display: none; flex-direction: column; gap: 5px;
   background: none; border: none; cursor: pointer; padding: 4px;
@@ -33,7 +42,7 @@
   .links {
     display: none; flex-direction: column; gap: 0;
     position: absolute; top: 64px; left: 0; right: 0;
-    background: #fff; border-bottom: 1px solid var(--border);
+    background: var(--card); border-bottom: 1px solid var(--border);
     padding: 1rem 2rem;
   }
   .links.open { display: flex; }
