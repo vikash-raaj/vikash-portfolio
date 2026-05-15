@@ -1,31 +1,107 @@
-.section { padding: 80px 2rem; background: var(--bg); }
+.section { padding: 80px 2rem; background: var(--card); }
 .inner { max-width: 1200px; margin: 0 auto; }
+
+/* header */
+.header {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  gap: 2rem; margin-bottom: 2.5rem; flex-wrap: wrap;
+}
 .label { font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; color: var(--primary); text-transform: uppercase; margin-bottom: 0.4rem; }
 .title { font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 800; letter-spacing: -0.5px; margin-bottom: 0.5rem; color: var(--text); }
-.subtitle { color: var(--muted); max-width: 580px; margin-bottom: 2.5rem; }
+.subtitle { color: var(--muted); max-width: 500px; font-size: 0.95rem; line-height: 1.6; }
+
+/* stat pills */
+.statRow {
+  display: flex; gap: 1rem; align-items: center; flex-shrink: 0; flex-wrap: wrap;
+}
+.stat {
+  display: flex; flex-direction: column; align-items: center;
+  background: var(--bg); border: 1px solid var(--border);
+  border-radius: 14px; padding: 0.75rem 1.25rem; min-width: 80px;
+}
+.statNum { font-size: 1.6rem; font-weight: 900; color: var(--primary); line-height: 1; }
+.statLbl { font-size: 0.7rem; color: var(--muted); font-weight: 600; margin-top: 0.2rem; text-align: center; }
+
+/* grid */
 .grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
-  opacity: 0; transform: translateY(24px); transition: opacity 0.5s, transform 0.5s;
+  opacity: 0; transform: translateY(24px); transition: opacity 0.6s, transform 0.6s;
 }
 .grid:global(.visible) { opacity: 1; transform: none; }
+
+/* card */
 .card {
-  background: var(--card); border-radius: 16px;
-  padding: 1.5rem; border: 1px solid var(--border);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-.card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,112,210,0.1); }
-.cardTitle {
-  font-size: 0.8rem; font-weight: 700; letter-spacing: 1px;
-  text-transform: uppercase; color: var(--primary);
-  margin-bottom: 1rem;
-  display: flex; align-items: center; gap: 0.5rem;
-}
-.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--gradient); flex-shrink: 0; }
-.tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-.tag {
-  background: var(--bg); color: var(--text);
-  font-size: 0.8rem; font-weight: 500;
-  padding: 0.3rem 0.8rem; border-radius: 20px;
+  background: var(--bg);
   border: 1px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+  border-color: var(--from, var(--primary));
+}
+
+/* card header */
+.cardHead {
+  background: linear-gradient(135deg, var(--from), var(--to));
+  padding: 1.25rem 1.5rem;
+  display: flex; align-items: center; gap: 1rem;
+}
+.iconBox {
+  width: 48px; height: 48px; border-radius: 12px;
+  background: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.3);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; backdrop-filter: blur(8px);
+}
+.iconEmoji { font-size: 1.5rem; line-height: 1; }
+.headText {}
+.category {
+  font-size: 0.9rem; font-weight: 800;
+  color: #fff; letter-spacing: 0.2px;
+  line-height: 1.2;
+}
+.count {
+  font-size: 0.72rem; font-weight: 500;
+  color: rgba(255,255,255,0.75);
+  margin-top: 0.2rem;
+}
+
+/* divider */
+.divider {
+  height: 3px;
+  background: linear-gradient(90deg, var(--from), var(--to));
+  opacity: 0.4;
+}
+
+/* tags */
+.tags {
+  padding: 1.25rem 1.5rem 1.5rem;
+  display: flex; flex-wrap: wrap; gap: 0.5rem;
+}
+.tag {
+  background: var(--card);
+  color: var(--text);
+  font-size: 0.8rem; font-weight: 500;
+  padding: 0.35rem 0.85rem;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.card:hover .tag {
+  border-color: color-mix(in srgb, var(--from) 30%, var(--border));
+}
+.card:hover .tag:hover {
+  background: linear-gradient(135deg, var(--from), var(--to));
+  color: #fff;
+  border-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .header { flex-direction: column; }
+  .grid { grid-template-columns: 1fr; }
 }

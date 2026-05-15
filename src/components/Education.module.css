@@ -1,16 +1,101 @@
-.section { padding: 80px 2rem; background: var(--card); }
-.inner { max-width: 1200px; margin: 0 auto; }
+.section { padding: 80px 2rem; background: var(--bg); }
+.inner { max-width: 860px; margin: 0 auto; }
+
+.header { margin-bottom: 3rem; }
 .label { font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; color: var(--primary); text-transform: uppercase; margin-bottom: 0.4rem; }
-.title { font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 800; letter-spacing: -0.5px; margin-bottom: 2rem; color: var(--text); }
-.grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  opacity: 0; transform: translateY(24px); transition: opacity 0.5s, transform 0.5s;
+.title { font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 800; letter-spacing: -0.5px; margin-bottom: 0.6rem; color: var(--text); }
+.subtitle { color: var(--muted); max-width: 540px; font-size: 0.95rem; line-height: 1.6; }
+
+/* timeline */
+.timeline {
+  display: flex; flex-direction: column; gap: 0;
+  opacity: 0; transform: translateY(24px); transition: opacity 0.6s, transform 0.6s;
 }
-.grid:global(.visible) { opacity: 1; transform: none; }
-.card { background: var(--bg); border-radius: 16px; padding: 1.5rem; border: 1px solid var(--border); }
-.year { font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--primary); margin-bottom: 0.5rem; }
-.degree { font-weight: 700; margin-bottom: 0.3rem; }
-.field { font-size: 0.9rem; color: var(--muted); margin-bottom: 0.3rem; }
-.school { font-size: 0.85rem; color: var(--muted); margin-bottom: 0.75rem; line-height: 1.5; }
-.score { display: inline-block; background: rgba(0,112,210,0.08); color: var(--primary); font-size: 0.8rem; font-weight: 700; padding: 0.2rem 0.8rem; border-radius: 20px; }
+.timeline:global(.visible) { opacity: 1; transform: none; }
+
+.item {
+  display: flex; gap: 1.75rem; align-items: flex-start;
+}
+
+/* spine — icon + vertical line */
+.spine {
+  display: flex; flex-direction: column; align-items: center;
+  flex-shrink: 0; width: 56px;
+}
+.iconCircle {
+  width: 56px; height: 56px; border-radius: 50%;
+  border: 2px solid;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; z-index: 1;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+.iconEmoji { font-size: 1.5rem; line-height: 1; }
+.line {
+  width: 2px; flex: 1; min-height: 2rem;
+  background: var(--border);
+  margin: 0.5rem 0;
+}
+
+/* card */
+.card {
+  flex: 1;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent, var(--primary));
+  border-radius: 0 18px 18px 0;
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 2rem;
+  transition: transform 0.25s, box-shadow 0.25s;
+  position: relative;
+}
+.card:hover {
+  transform: translateX(4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+}
+
+.cardTop {
+  display: flex; align-items: center; gap: 0.75rem;
+  margin-bottom: 0.85rem; flex-wrap: wrap;
+}
+.yearBadge {
+  font-size: 0.78rem; font-weight: 800; letter-spacing: 0.5px;
+  padding: 0.3rem 0.9rem; border-radius: 20px;
+}
+.levelBadge {
+  font-size: 0.72rem; font-weight: 600;
+  color: var(--muted); background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 0.25rem 0.75rem; border-radius: 20px;
+  letter-spacing: 0.3px;
+}
+
+.degree {
+  font-size: 1.15rem; font-weight: 800;
+  color: var(--text); margin-bottom: 0.3rem; line-height: 1.3;
+}
+.field {
+  font-size: 0.9rem; color: var(--primary);
+  font-weight: 600; margin-bottom: 0.75rem;
+}
+.institution {
+  display: flex; align-items: flex-start; gap: 0.4rem;
+  font-size: 0.85rem; color: var(--muted);
+  line-height: 1.5; margin-bottom: 1rem;
+}
+.institution svg { flex-shrink: 0; margin-top: 2px; opacity: 0.6; }
+
+.cardFoot {}
+.verified {
+  display: inline-flex; align-items: center; gap: 0.3rem;
+  font-size: 0.72rem; font-weight: 700;
+  padding: 0.25rem 0.75rem; border-radius: 20px;
+  border: 1px solid;
+}
+
+@media (max-width: 600px) {
+  .item { gap: 1rem; }
+  .spine { width: 44px; }
+  .iconCircle { width: 44px; height: 44px; }
+  .iconEmoji { font-size: 1.2rem; }
+  .card { padding: 1.25rem; }
+}
