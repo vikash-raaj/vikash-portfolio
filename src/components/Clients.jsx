@@ -1,29 +1,14 @@
 import styles from './Clients.module.css';
 
 const clients = [
-  { name: 'REV',                   domain: 'rev.io'                   },
-  { name: 'M1 Singapore',          domain: 'm1.com.sg'                },
-  { name: 'Bell',                  domain: 'bell.ca'                  },
-  { name: 'Synergy',               domain: 'synergy.com'              },
-  { name: 'Liberty Latin America', domain: 'libertylatinamerica.com'  },
-  { name: 'PLDT',                  domain: 'pldt.com.ph'              },
-  { name: 'AXA Digital',           domain: 'axa.com'                  },
+  { name: 'REV',                   abbr: 'REV',  color: '#e74c3c', bg: 'rgba(231,76,60,0.15)'   },
+  { name: 'M1 Singapore',          abbr: 'M1',   color: '#e83030', bg: 'rgba(232,48,48,0.15)'   },
+  { name: 'Bell',                  abbr: 'Bell', color: '#003087', bg: 'rgba(0,48,135,0.25)'    },
+  { name: 'Synergy',               abbr: 'SYN',  color: '#00a651', bg: 'rgba(0,166,81,0.15)'    },
+  { name: 'Liberty Latin America', abbr: 'LLA',  color: '#a855f7', bg: 'rgba(168,85,247,0.15)'  },
+  { name: 'PLDT',                  abbr: 'PLDT', color: '#f59e0b', bg: 'rgba(245,158,11,0.15)'  },
+  { name: 'AXA Digital',           abbr: 'AXA',  color: '#00a1e0', bg: 'rgba(0,161,224,0.15)'   },
 ];
-
-function LogoCard({ name, domain }) {
-  return (
-    <div className={styles.card}>
-      <img
-        src={`https://logo.clearbit.com/${domain}`}
-        alt={name}
-        className={styles.logo}
-        loading="lazy"
-        onError={e => { e.currentTarget.style.display = 'none'; e.currentTarget.nextSibling.style.display = 'flex'; }}
-      />
-      <span className={styles.fallback} style={{ display: 'none' }}>{name}</span>
-    </div>
-  );
-}
 
 export default function Clients() {
   return (
@@ -33,7 +18,11 @@ export default function Clients() {
       <div className={styles.track}>
         <div className={styles.inner}>
           {[...clients, ...clients].map((c, i) => (
-            <LogoCard key={i} name={c.name} domain={c.domain} />
+            <div key={i} className={styles.card} style={{ '--accent': c.color, '--card-bg': c.bg }}>
+              <span className={styles.abbr} style={{ color: c.color }}>{c.abbr}</span>
+              <span className={styles.name}>{c.name}</span>
+              <span className={styles.bar} style={{ background: c.color }} />
+            </div>
           ))}
         </div>
       </div>
