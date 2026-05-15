@@ -1,5 +1,6 @@
 import Nav from './components/Nav';
 import Hero from './components/Hero';
+import Clients from './components/Clients';
 import About from './components/About';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
@@ -14,6 +15,7 @@ export default function App() {
     <>
       <Nav />
       <Hero />
+      <Clients />
       <About />
       <Skills />
       <Experience />
