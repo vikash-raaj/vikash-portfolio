@@ -92,7 +92,7 @@ export const experience = [
         tags: ["OmniScript", "Order Management", "Industry CPQ", "Vlocity CLM", "Vlocity EPC", "Calculation Procedures", "Calculation Matrices", "Apex"],
       },
       {
-        name: "Bill",
+        name: "Bell",
         period: "Sept 2025 – Present",
         domain: "Revenue Cloud / Salesforce ARM — Order-to-Cash (O2C)",
         bullets: [
