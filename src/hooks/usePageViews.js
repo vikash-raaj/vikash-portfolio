@@ -1,14 +1,11 @@
 import { useState, useEffect } from 'react';
 
-// Firebase Realtime Database REST API — CORS enabled, no SDK needed
-const DB_URL = `${import.meta.env.VITE_FIREBASE_DB_URL}/pageviews.json`;
+const DB_URL = 'https://vikash-portfolio-f1cd0-default-rtdb.firebaseio.com/pageviews.json';
 
 export default function usePageViews() {
   const [count, setCount] = useState(null);
 
   useEffect(() => {
-    if (!import.meta.env.VITE_FIREBASE_DB_URL) return;
-
     async function increment() {
       const res = await fetch(DB_URL);
       const current = (await res.json()) || 0;
@@ -20,7 +17,6 @@ export default function usePageViews() {
       });
       setCount(next);
     }
-
     increment().catch(() => setCount(null));
   }, []);
 
