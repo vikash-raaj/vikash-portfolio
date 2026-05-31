@@ -9,7 +9,7 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/vikash-raj-a12489119/",
   trailblazer: "https://trailblazer.me/id/vikash-raj",
   gitHub: "https://github.com/vikash-raaj",
-  resume: "/Vikash_RevenueCloud.pdf",
+  resume: "/Vikash_RevenueVlocityDev.pdf",
   languages: ["English", "Hindi"],
   about: [
     "An energetic, self-motivated individual with the ability to grasp new technical concepts and utilize them in a productive manner. Accomplished and ambitious Software Engineer with around 6+ years of working experience in Telecom, Media Cloud, Insurance, and Salesforce Industry Cloud domains.",
