@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { profile } from '../data';
 import styles from './Hero.module.css';
 import profilePhoto from '../assets/profile.jpg';
+import useResumeUrl from '../hooks/useResumeUrl';
 
 const TITLES = [
   'Senior Salesforce Vlocity Developer',
@@ -73,8 +74,24 @@ function StatCounter({ num, label }) {
   );
 }
 
+async function downloadResume(url) {
+  try {
+    const res = await fetch(url);
+    const blob = await res.blob();
+    const blobUrl = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = blobUrl;
+    a.download = 'Vikash_Raj_Resume.pdf';
+    a.click();
+    URL.revokeObjectURL(blobUrl);
+  } catch {
+    window.open(url, '_blank');
+  }
+}
+
 export default function Hero() {
   const typedTitle = useTyping();
+  const resumeUrl = useResumeUrl();
 
   return (
     <section id="hero" className={styles.hero}>
@@ -102,11 +119,11 @@ export default function Hero() {
           <div className={styles.cta}>
             <a href="#contact" className={styles.btnWhite}>Get in Touch</a>
             <a href="#experience" className={styles.btnOutline}>View Experience</a>
-            {profile.resume && (
-              <a href={profile.resume} download="Vikash_Raj_Resume.pdf" className={styles.btnOutline}>
+            {resumeUrl && (
+              <button onClick={() => downloadResume(resumeUrl)} className={styles.btnOutline}>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                 Download Resume
-              </a>
+              </button>
             )}
           </div>
           <div className={styles.stats}>
