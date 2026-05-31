@@ -3,3 +3,10 @@
   text-align: center; padding: 1.5rem;
   font-size: 0.8rem;
 }
+
+.views {
+  margin-top: 0.4rem;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.25);
+  letter-spacing: 0.03em;
+}
