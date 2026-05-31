@@ -4,9 +4,9 @@ export default function usePageViews() {
   const [count, setCount] = useState(null);
 
   useEffect(() => {
-    fetch('https://api.countapi.xyz/hit/vikashraj-portfolio/pageviews')
+    fetch('https://api.counterapi.dev/v1/vikashraj-portfolio/pageviews/up')
       .then(res => res.json())
-      .then(data => setCount(data.value))
+      .then(data => setCount(data.count))
       .catch(() => setCount(null));
   }, []);
 
