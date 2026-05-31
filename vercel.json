@@ -1,0 +1,9 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "functions": {
+    "api/pageviews.js": {
+      "runtime": "nodejs20.x"
+    }
+  }
+}
