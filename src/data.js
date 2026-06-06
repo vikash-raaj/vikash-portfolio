@@ -200,15 +200,51 @@ export const experience = [
 ];
 
 export const certifications = [
-  { name: "Revenue Cloud Consultant", icon: "💰" },
-  { name: "Certified OmniStudio Developer", icon: "🔧" },
-  { name: "Certified OmniStudio Consultant", icon: "👥" },
-  { name: "Certified Industry CPQ Developer", icon: "📈" },
-  { name: "Certified Platform Developer II", icon: "⚡" },
-  { name: "Certified Platform Developer I", icon: "💻" },
-  { name: "Certified Administrator (ADM 201)", icon: "🌟" },
-  { name: "Agentforce Specialist", icon: "🤖" },
-  { name: "Telecommunication Cloud", icon: "📡" },
+  {
+    name: "Salesforce Certified Agentforce Specialist",
+    category: "Agentforce", issued: "Jun 2025",
+    badge: "https://www.salesforceben.com/wp-content/uploads/2024/08/Agentforce-Specialist.png",
+  },
+  {
+    name: "Salesforce Certified OmniStudio Developer",
+    category: "Industry Solutions", issued: "Jan 2023",
+    badge: "https://www.salesforceben.com/wp-content/uploads/2023/10/Omnistudio-Developer.png",
+  },
+  {
+    name: "Salesforce Certified OmniStudio Consultant",
+    category: "Industry Solutions", issued: "Jun 2025",
+    badge: "https://www.salesforceben.com/wp-content/uploads/2024/10/OmniStudio-Consultant-.webp",
+  },
+  {
+    name: "Salesforce Certified Industries CPQ Developer",
+    category: "Industry Solutions", issued: "Jan 2023",
+    badge: "https://www.salesforceben.com/wp-content/uploads/2023/10/Industries-CPQ-Developer.png",
+  },
+  {
+    name: "Salesforce Certified Revenue Cloud Consultant",
+    category: "Revenue Cloud", issued: "Dec 2025",
+    badge: "https://www.salesforceben.com/wp-content/uploads/2025/10/servlet.png",
+  },
+  {
+    name: "Salesforce Certified Platform Administrator",
+    category: "Salesforce Platform", issued: "Jan 2023",
+    badge: "https://www.salesforceben.com/wp-content/uploads/2023/08/Platform-Administrator.png",
+  },
+  {
+    name: "Salesforce Certified Platform Developer I",
+    category: "Salesforce Platform", issued: "Jan 2023",
+    badge: "https://www.salesforceben.com/wp-content/uploads/2023/10/Platform-Developer.png",
+  },
+  {
+    name: "Salesforce Certified Platform Developer II",
+    category: "Salesforce Platform", issued: "Feb 2023",
+    badge: "https://www.salesforceben.com/wp-content/uploads/2023/10/Platform-Developer-II.png",
+  },
+  {
+    name: "Salesforce Certified Platform Sharing and Visibility Architect",
+    category: "Salesforce Platform", issued: "2025",
+    badge: "https://www.salesforceben.com/wp-content/uploads/2025/07/Platform-Sharing-and-Visibility-Architect.png",
+  },
 ];
 
 export const education = [

@@ -4,6 +4,7 @@ import { useFadeUp } from '../hooks/useFadeUp';
 
 export default function Certifications() {
   const ref = useFadeUp();
+
   return (
     <section id="certifications" className={styles.section}>
       <div className={styles.inner}>
@@ -17,35 +18,36 @@ export default function Certifications() {
           </div>
           <div className={styles.badge}>
             <span className={styles.badgeNum}>{certifications.length}</span>
-            <span className={styles.badgeTxt}>Active<br/>Certs</span>
+            <span className={styles.badgeTxt}>Active<br />Certs</span>
           </div>
         </div>
 
-        <div className={styles.grid} ref={ref}>
-          {certifications.map((c, i) => (
-            <div className={styles.card} key={c.name}>
-              <div className={styles.cardTop}>
-                <div className={styles.iconWrap}>
-                  <span className={styles.iconEmoji}>{c.icon}</span>
-                </div>
-                <span className={styles.num}>#{String(i + 1).padStart(2, '0')}</span>
+        <div className={styles.list} ref={ref}>
+          {certifications.map((cert) => (
+            <div className={styles.row} key={cert.name}>
+              <div className={styles.badgeWrap}>
+                <img
+                  src={cert.badge}
+                  alt={cert.name}
+                  className={styles.badgeImg}
+                  loading="lazy"
+                />
               </div>
-              <div className={styles.cardBody}>
-                <div className={styles.certName}>{c.name}</div>
-                <div className={styles.org}>
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="var(--primary)">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                  </svg>
-                  Salesforce
+
+              <div className={styles.rowBody}>
+                <span className={styles.category}>{cert.category}</span>
+                <div className={styles.certName}>{cert.name}</div>
+                <div className={styles.statusRow}>
+                  <span className={styles.active}>
+                    <span className={styles.dot} />
+                    Active
+                  </span>
                 </div>
               </div>
-              <div className={styles.cardFoot}>
-                <span className={styles.verified}>
-                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-                    <polyline points="20 6 9 17 4 12"/>
-                  </svg>
-                  Certified
-                </span>
+
+              <div className={styles.rowRight}>
+                <span className={styles.issuedLabel}>Issued</span>
+                <span className={styles.issuedDate}>{cert.issued}</span>
               </div>
             </div>
           ))}
