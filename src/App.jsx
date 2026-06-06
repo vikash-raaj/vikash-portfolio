@@ -1,4 +1,5 @@
 import Nav from './components/Nav';
+import ScrollProgress from './components/ScrollProgress';
 import Hero from './components/Hero';
 import Clients from './components/Clients';
 import About from './components/About';
@@ -13,6 +14,7 @@ import BackToTop from './components/BackToTop';
 export default function App() {
   return (
     <>
+      <ScrollProgress />
       <Nav />
       <Hero />
       <Clients />
