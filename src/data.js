@@ -12,9 +12,9 @@ export const profile = {
   resume: "/Vikash_RevenueVlocityDev.pdf",
   languages: ["English", "Hindi"],
   about: [
+    "Bachelor of Technology in Computer Science & Engineering. Expertise in Salesforce development with extensive experience in Salesforce Vlocity, Salesforce Industry CPQ, Vlocity Order Management, CLM, EPC, Vlocity CPQ, Apex Classes, Apex Triggers, SOQL, SOSL, Customer360, Lightning Web Components, Lightning Aura Components, Salesforce Admin, Salesforce Sales Cloud, AWS, and Copado. Experienced in designing, developing & deploying applications using the Agile SDLC and Copado process. Trailhead Ranger. Cooperative team leader and team player with a positive attitude.",
     "An energetic, self-motivated individual with the ability to grasp new technical concepts and utilize them in a productive manner. Accomplished and ambitious Software Engineer with around 6+ years of working experience in Telecom, Media Cloud, Insurance, and Salesforce Industry Cloud domains.",
     "In a leadership role, I manage a team of three Salesforce developers, driving high-quality delivery and fostering a collaborative, agile development environment.",
-    "Bachelor of Technology in Computer Science & Engineering. Expertise in Salesforce development with extensive experience in Salesforce Vlocity, Salesforce Industry CPQ, Vlocity Order Management, CLM, EPC, Vlocity CPQ, Apex Classes, Apex Triggers, SOQL, SOSL, Customer360, Lightning Web Components, Lightning Aura Components, Salesforce Admin, Salesforce Sales Cloud, AWS, and Copado. Experienced in designing, developing & deploying applications using the Agile SDLC and Copado process. Trailhead Ranger. Cooperative team leader and team player with a positive attitude.",
   ],
   stats: [
     { num: "10+", label: "Project Delivered" },
