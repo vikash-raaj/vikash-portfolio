@@ -10,7 +10,7 @@ const highlights = [
     from: '#f59e0b', to: '#f97316',
   },
   {
-    icon: '📈', label: 'CPQ & Q2C Expert',
+    icon: '📈', label: 'CPQ, Order Management & Q2C Expert',
     text: 'End-to-end CPQ, Quote-to-Cash & Order Management across Telecom, Media, Insurance & Energy domains',
     from: '#0070d2', to: '#00a1e0',
   },
