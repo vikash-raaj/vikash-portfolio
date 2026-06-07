@@ -249,23 +249,6 @@ export const certifications = [
 
 export const projects = [
   {
-    id: 'm1',
-    title: "CPQ & Order Management Platform",
-    client: "M1 Singapore",
-    domain: "Telecom",
-    period: "2023 – 2025",
-    role: "Team Lead · 3 Developers",
-    summary: "Led end-to-end delivery of a large-scale CPQ and Order Management platform for Singapore's third-largest telco, managing a team of 3 Salesforce developers.",
-    highlights: [
-      "Delivered 500+ OM tasks covering New Connect and After Sales orchestration flows",
-      "Configured 2000+ products in Vlocity EPC with attribute-based pricing & context rules",
-      "Built Orchestration Plans with Nokia, Billing & MuleSoft external callouts end-to-end",
-      "CLM document templates generating 1000+ page Quote and Contract Proposals",
-    ],
-    tags: ["OmniScript", "Order Management", "Industry CPQ", "Vlocity EPC", "CLM", "DataRaptor"],
-    accent: "#FF9E1B",
-  },
-  {
     id: 'bell',
     title: "Revenue Cloud Order-to-Cash",
     client: "Bell Canada",
@@ -300,6 +283,23 @@ export const projects = [
     accent: "#CC1230",
   },
   {
+    id: 'm1',
+    title: "CPQ & Order Management Platform",
+    client: "M1 Singapore",
+    domain: "Telecom",
+    period: "2023 – 2025",
+    role: "Team Lead · 3 Developers",
+    summary: "Led end-to-end delivery of a large-scale CPQ and Order Management platform for Singapore's third-largest telco, managing a team of 3 Salesforce developers.",
+    highlights: [
+      "Delivered 500+ OM tasks covering New Connect and After Sales orchestration flows",
+      "Configured 2000+ products in Vlocity EPC with attribute-based pricing & context rules",
+      "Built Orchestration Plans with Nokia, Billing & MuleSoft external callouts end-to-end",
+      "CLM document templates generating 1000+ page Quote and Contract Proposals",
+    ],
+    tags: ["OmniScript", "Order Management", "Industry CPQ", "Vlocity EPC", "CLM", "DataRaptor"],
+    accent: "#FF9E1B",
+  },
+  {
     id: 'axa',
     title: "Health Cloud Patient Portal",
     client: "AXA Digital",
@@ -321,25 +321,25 @@ export const projects = [
 export const testimonials = [
   {
     quote: "Vikash is an exceptional Vlocity developer who consistently delivers complex Order Management solutions with precision. His deep understanding of CPQ and EPC configuration made him indispensable to our project delivery.",
-    name: "Arjun Mehta",
+    name: "Maciej Sobczyński",
     role: "Delivery Manager",
     company: "Triarit Private Limited",
-    initial: "A",
+    initial: "M",
     color: "#0070d2",
   },
   {
     quote: "As a team lead, Vikash brought both technical excellence and collaborative leadership. He mentored developers effectively while delivering 2000+ product configurations on time with zero critical defects.",
-    name: "Sarah Chen",
+    name: "Vikas Sharma",
     role: "Engagement Lead",
     company: "M1 Singapore",
-    initial: "S",
+    initial: "V",
     color: "#7c3aed",
   },
   {
     quote: "Vikash has an impressive ability to translate complex telecom business requirements into scalable Vlocity solutions. His Apex round-robin framework has become a cornerstone of our sales operations.",
     name: "Michael Torres",
     role: "Salesforce Architect",
-    company: "REV",
+    company: "Accenture",
     initial: "M",
     color: "#059669",
   },
