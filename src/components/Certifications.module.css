@@ -23,6 +23,35 @@
 .badgeNum { font-size: 3rem; font-weight: 900; color: #fff; line-height: 1; }
 .badgeTxt { font-size: 0.8rem; font-weight: 600; color: rgba(255,255,255,0.85); line-height: 1.4; }
 
+/* ── trailhead banner ── */
+.trailheadBanner {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 1rem;
+  background: linear-gradient(135deg, #0070d2 0%, #00a1e0 100%);
+  border-radius: 16px; padding: 1.2rem 1.75rem;
+  margin-bottom: 1.75rem;
+}
+.thLeft { display: flex; align-items: center; gap: 0.85rem; }
+.rangerBadge { width: 48px; height: 48px; object-fit: contain; flex-shrink: 0; }
+.thTitle { font-size: 1rem; font-weight: 800; color: #fff; }
+.thSub   { font-size: 0.75rem; color: rgba(255,255,255,0.75); margin-top: 0.1rem; }
+.thStats { display: flex; align-items: center; gap: 1.25rem; }
+.thStat  { text-align: center; }
+.thNum   { display: block; font-size: 1.3rem; font-weight: 900; color: #fff; line-height: 1; }
+.thLabel { display: block; font-size: 0.7rem; color: rgba(255,255,255,0.75); margin-top: 0.15rem; font-weight: 600; }
+.thDivider { width: 1px; height: 32px; background: rgba(255,255,255,0.25); }
+.thLink {
+  background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3);
+  color: #fff; border-radius: 8px; padding: 0.5rem 1rem;
+  font-size: 0.85rem; font-weight: 700; white-space: nowrap;
+  transition: background 0.2s;
+}
+.thLink:hover { background: rgba(255,255,255,0.28); }
+@media (max-width: 640px) {
+  .trailheadBanner { flex-direction: column; align-items: flex-start; }
+  .thStats { flex-wrap: wrap; }
+}
+
 /* ── list container ── */
 .list {
   display: flex; flex-direction: column;

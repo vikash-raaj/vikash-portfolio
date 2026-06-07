@@ -22,6 +22,36 @@ export default function Certifications() {
           </div>
         </div>
 
+        {/* Trailhead Stats Banner */}
+        <div className={styles.trailheadBanner}>
+          <div className={styles.thLeft}>
+            <img
+              src="https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/trailhead_basics/get-started-with-trailhead/images/ced11d23e2248b38bc25f62a7b0ce8c2_ranger-badge.png"
+              alt="Trailhead Ranger"
+              className={styles.rangerBadge}
+              onError={e => { e.target.style.display = 'none'; }}
+            />
+            <div>
+              <div className={styles.thTitle}>Trailhead Ranger</div>
+              <div className={styles.thSub}>Salesforce's highest community rank</div>
+            </div>
+          </div>
+          <div className={styles.thStats}>
+            <div className={styles.thStat}><span className={styles.thNum}>9</span><span className={styles.thLabel}>Certifications</span></div>
+            <div className={styles.thDivider} />
+            <div className={styles.thStat}><span className={styles.thNum}>7+</span><span className={styles.thLabel}>Yrs Experience</span></div>
+            <div className={styles.thDivider} />
+            <div className={styles.thStat}><span className={styles.thNum}>500+</span><span className={styles.thLabel}>OM Tasks</span></div>
+          </div>
+          <a
+            href="https://trailblazer.me/id/vikash-raj"
+            target="_blank" rel="noreferrer"
+            className={styles.thLink}
+          >
+            View Profile →
+          </a>
+        </div>
+
         <div className={styles.list} ref={ref}>
           {certifications.map((cert) => (
             <div className={styles.row} key={cert.name}>

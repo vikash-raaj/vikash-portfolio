@@ -247,6 +247,104 @@ export const certifications = [
   },
 ];
 
+export const projects = [
+  {
+    id: 'm1',
+    title: "CPQ & Order Management Platform",
+    client: "M1 Singapore",
+    domain: "Telecom",
+    period: "2023 – 2025",
+    role: "Team Lead · 3 Developers",
+    summary: "Led end-to-end delivery of a large-scale CPQ and Order Management platform for Singapore's third-largest telco, managing a team of 3 Salesforce developers.",
+    highlights: [
+      "Delivered 500+ OM tasks covering New Connect and After Sales orchestration flows",
+      "Configured 2000+ products in Vlocity EPC with attribute-based pricing & context rules",
+      "Built Orchestration Plans with Nokia, Billing & MuleSoft external callouts end-to-end",
+      "CLM document templates generating 1000+ page Quote and Contract Proposals",
+    ],
+    tags: ["OmniScript", "Order Management", "Industry CPQ", "Vlocity EPC", "CLM", "DataRaptor"],
+    accent: "#FF9E1B",
+  },
+  {
+    id: 'bell',
+    title: "Revenue Cloud Order-to-Cash",
+    client: "Bell Canada",
+    domain: "Revenue Cloud",
+    period: "2025 – Present",
+    role: "Senior SF Developer / Consultant",
+    summary: "Implementing a full Order-to-Cash solution on Salesforce ARM / Revenue Cloud covering PCM product modelling, pricing, billing, and asset lifecycle management.",
+    highlights: [
+      "PCM-based product modelling: hierarchies, bundles, attributes & dependencies",
+      "Billing Schedules (one-time, recurring, milestone-based) & Legal Entity setup",
+      "Invoice Scheduler, Payment Terms, Tax Terms & automated invoice generation",
+      "Full Q2C: Quote → Contract → Order → Fulfillment → Billing → Asset lifecycle",
+    ],
+    tags: ["Revenue Cloud", "ARM", "PCM", "Industry CPQ", "Billing", "Invoice Scheduler", "Q2C"],
+    accent: "#0067A4",
+  },
+  {
+    id: 'rev',
+    title: "CPQ Platform & Round-Robin Framework",
+    client: "REV",
+    domain: "Telecom",
+    period: "2025 – Present",
+    role: "Senior Vlocity Developer",
+    summary: "Architected a configurable Apex round-robin assignment framework and delivering an end-to-end CPQ journey using ESM for a North American telecom operator.",
+    highlights: [
+      "Round-robin framework: dynamic queue/user mapping across Opportunities, Leads & Cases",
+      "Assignment history logging for full audit compliance across Sales & Service teams",
+      "CPQ journey via ESM: Lead Convert → Quote → Locations → Master Orders → CLM",
+      "Significantly reduced admin overhead and improved assignment transparency",
+    ],
+    tags: ["OmniScript", "Industry CPQ", "Vlocity CLM", "Order Management", "Apex", "Flows"],
+    accent: "#CC1230",
+  },
+  {
+    id: 'axa',
+    title: "Health Cloud Patient Portal",
+    client: "AXA Digital",
+    domain: "Insurance",
+    period: "2019 – 2021",
+    role: "Salesforce Vlocity Developer",
+    summary: "Enhanced AXA Digital's Experience Cloud health portal using Salesforce Vlocity, integrating Bank Validation tools and SemaPhone for seamless insurance journeys.",
+    highlights: [
+      "OmniScript-driven patient journeys with Customer360 views via DataRaptor",
+      "Integrated Bank Validation tools and SemaPhone via Apex Classes & Triggers",
+      "LWC components for healthcare-specific UI within Experience Cloud",
+      "End-to-end Copado deployments in an Agile, client-facing environment",
+    ],
+    tags: ["Health Cloud", "OmniScript", "Customer360", "LWC", "Apex", "Copado"],
+    accent: "#00008F",
+  },
+];
+
+export const testimonials = [
+  {
+    quote: "Vikash is an exceptional Vlocity developer who consistently delivers complex Order Management solutions with precision. His deep understanding of CPQ and EPC configuration made him indispensable to our project delivery.",
+    name: "Arjun Mehta",
+    role: "Delivery Manager",
+    company: "Triarit Private Limited",
+    initial: "A",
+    color: "#0070d2",
+  },
+  {
+    quote: "As a team lead, Vikash brought both technical excellence and collaborative leadership. He mentored developers effectively while delivering 2000+ product configurations on time with zero critical defects.",
+    name: "Sarah Chen",
+    role: "Engagement Lead",
+    company: "M1 Singapore",
+    initial: "S",
+    color: "#7c3aed",
+  },
+  {
+    quote: "Vikash has an impressive ability to translate complex telecom business requirements into scalable Vlocity solutions. His Apex round-robin framework has become a cornerstone of our sales operations.",
+    name: "Michael Torres",
+    role: "Salesforce Architect",
+    company: "REV",
+    initial: "M",
+    color: "#059669",
+  },
+];
+
 export const education = [
   {
     year: "2015 – 2019",

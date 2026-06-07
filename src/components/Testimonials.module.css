@@ -1,0 +1,59 @@
+.section { padding: 80px 2rem; background: var(--card); }
+.inner  { max-width: 1100px; margin: 0 auto; }
+
+/* header */
+.header   { text-align: center; margin-bottom: 2.5rem; }
+.label    { font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; color: var(--primary); text-transform: uppercase; margin-bottom: 0.4rem; }
+.title    { font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 800; letter-spacing: -0.5px; color: var(--text); margin-bottom: 0.5rem; }
+.subtitle { color: var(--muted); font-size: 0.95rem; }
+
+/* grid */
+.grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  opacity: 0; transform: translateY(24px);
+  transition: opacity 0.6s, transform 0.6s;
+}
+.grid:global(.visible) { opacity: 1; transform: none; }
+
+/* card */
+.card {
+  background: var(--bg); border: 1px solid var(--border);
+  border-radius: 20px; padding: 1.75rem;
+  display: flex; flex-direction: column; gap: 1rem;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+}
+
+.quoteIcon { line-height: 1; }
+
+.stars { display: flex; gap: 2px; }
+
+.quote {
+  font-size: 0.9rem; color: var(--text); line-height: 1.7;
+  font-style: italic; flex: 1;
+}
+
+/* author */
+.author { display: flex; align-items: center; gap: 0.75rem; margin-top: auto; }
+.avatar {
+  width: 44px; height: 44px; border-radius: 12px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem; font-weight: 800; color: #fff;
+}
+.name        { font-size: 0.9rem; font-weight: 700; color: var(--text); }
+.roleCompany { font-size: 0.75rem; color: var(--muted); margin-top: 0.1rem; }
+
+/* note */
+.note {
+  text-align: center; margin-top: 2rem;
+  font-size: 0.78rem; color: var(--muted);
+}
+.note a { color: var(--primary); font-weight: 600; }
+.note a:hover { text-decoration: underline; }
+
+@media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
+@media (min-width: 601px) and (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); } }
