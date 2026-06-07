@@ -3,7 +3,7 @@ import { projects } from '../data';
 import styles from './Projects.module.css';
 import { useFadeUp } from '../hooks/useFadeUp';
 
-const FILTERS = ['All', 'Telecom', 'Revenue Cloud', 'Insurance'];
+const FILTERS = ['All', 'Telecom', 'Revenue Cloud', 'Energy & Utility', 'Insurance'];
 
 export default function Projects() {
   const [active, setActive] = useState('All');
@@ -18,7 +18,7 @@ export default function Projects() {
           <p className={styles.label}>Case Studies</p>
           <h2 className={styles.title}>Projects</h2>
           <p className={styles.subtitle}>
-            Real-world enterprise Salesforce solutions delivered across Telecom, Revenue Cloud, and Insurance domains.
+            Real-world enterprise Salesforce solutions delivered across Telecom, Revenue Cloud, Energy & Utility, and Insurance domains.
           </p>
         </div>
 
